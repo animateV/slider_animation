@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт с анимацией слайдера</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="img/favicon/fire.png">
+  <!--  -->
+
+
+
+  <!-- bibliotek -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <script src="libs/gsap/gsap.min.js" defer></script>
+  <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+  <!--  -->
+
+
+
+  <!-- custom -->
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <!--  -->
+</head>
+
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container flex">
+
+      <!-- Логотип -->
+      <a class="header__link-logo" href="#!"></a>
+
+      <!-- Навигация в шапке -->
+      <nav class="header__navigation flex">
+        <ul class="header__list flex list-reset">
+          <li class="header__item header-item">
+            <a class="header-item__link" href="#abstract">Abstract</a>
+          </li>
+
+          <li class="header__item header-item">
+            <a class="header-item__link" href="#design">Design</a>
+          </li>
+
+          <li class="header__item header-item">
+            <a class="header-item__link" href="#featyre">Featyre</a>
+          </li>
+
+          <li class="header__item header-item">
+            <a class="header-item__link" href="#stylesheet">Stylesheet</a>
+          </li>
+
+          <li class="header__item header-item">
+            <a class="header-item__link" href="#leaspet">Leaspet</a>
+          </li>
+        </ul>
+
+        <button class="header__button" type="button">Active</button>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+  <div class="swiper slider">
+    <div class="swiper-wrapper">
+
+      <!-- Контент слайдра -->
+      <div class="swiper-slide slide">
+        <div class="slide__content" id="abstract">
+          <h1 class="slider__title">Abstract</h1>
+
+          <p class="slider__descr">
+            Designing for the futire
+          </p>
+
+          <button class="slider__button">Join us</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide">
+        <div class="slide__content" id="design">
+          <h1 class="slider__title">Design</h1>
+
+          <p class="slider__descr">
+            Designing for the futire
+          </p>
+
+          <button class="slider__button">Join us</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide">
+        <div class="slide__content" id="featyre">
+          <h1 class="slider__title">Featyre</h1>
+
+          <p class="slider__descr">
+            Designing for the futire
+          </p>
+
+          <button class="slider__button">Join us</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide">
+        <div class="slide__content" id="stylesheet">
+          <h1 class="slider__title">Stylesheet</h1>
+
+          <p class="slider__descr">
+            Designing for the futire
+          </p>
+
+          <button class="slider__button">Join us</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide slide">
+        <div class="slide__content" id="leaspet">
+          <h1 class="slider__title">Leaspet</h1>
+
+          <p class="slider__descr">
+            Designing for the futire
+          </p>
+
+          <button class="slider__button">Join us</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sliser__bottom">
+      <div class="slider__pagination">
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="slider__navigation">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+
+  <video class="video__background" src="video/background.mp4"></video>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+/* Переменные */
+:root {
+
+  /* Хаковый */
+  --idnex: calc(1vw + 1vh);
+
+
+
+  /* Цвет стрелок */
+  --swiper-theme-color: #4b4d53;
+
+  /* Отступы у стрелок в навигации */
+  --swiper-navigation-sides-offset: 40px;
+
+  /* Размер стрелок навигации */
+  --swiper-navigation-size: 30px;
+
+
+
+  /* Булллеты */
+  /* Отступы у буллетов */
+  --swiper-pagination-bottom: 20px;
+
+  /* Цвет у активного буллета */
+  --swiper-pagination-color: #afb3c0;
+
+  /* Цвет у неактивного буллета */
+  --swiper-pagination-bullet-inactive-color: #36373c;
+
+  /* Прозрачность у неактивных буллетов */
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+
+
+/* Глобальные стили */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background-color: black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Стили общего назначения */
+
+/* Скрытие элементов от пользовтеля */
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 850px;
+  width: 100%;
+}
+
+
+/* Шапка сайта */
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 50px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.header__link-logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  background-image: url("../img/logo/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  transition: background-image .3s;
+}
+
+.header__link-logo:focus-visible:not(:hover) {
+  outline: 1px solid #f69116;
+  outline-offset: 5px;
+  background-image: url("../img/logo/loog_orange.svg");
+}
+
+.header__link-logo:hover {
+  background-image: url("../img/logo/loog_orange.svg");
+}
+
+.header__link-logo:active {
+  background-image: url("../img/logo/orange_dark.svg");
+}
+
+.header__navigation {
+  align-items: center;
+  gap: 70px;
+}
+
+.header__list {
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.header-item__link {
+  outline: none;
+  font-family: sans-serif;
+  font-size: 17px;
+  color: #fff;
+  transition: color .3s;
+}
+
+.header-item__link:focus-visible:not(:hover) {
+  outline: 1px solid #f69116;
+  outline-offset: 5px;
+  color: #f69116;
+}
+
+.header-item__link:hover {
+  color: #f69116;
+}
+
+.header-item__link:active {
+  color: #d37f19;
+}
+
+.header__button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10rem;
+  outline: 1px solid var(--swiper-theme-color);
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s, background-color .3s;
+}
+
+.header__button:hover {
+  color: #333;
+  background-color: #d0d0d0;
+}
+
+.header__button:focus-visible:not(:hover) {
+  color: #333;
+  background-color: #d0d0d0;
+}
+
+.header__button:active {
+  background-color: #4b4d53;
+  color: #bcbcbc;
+}
+
+
+
+/* Слайдер */
+.slider {
+  height: 100vh;
+}
+
+.slider__title {
+  position: relative;
+  margin-bottom: calc(var(--idnex) * 2.3);
+  letter-spacing: calc(var(--idnex) * 1.65);
+  font-size: calc(var(--idnex) * 4);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slider__title::after {
+  position: absolute;
+  left: 30%;
+  bottom: calc(var(--idnex) * -1);
+  content: "";
+  height: 1px;
+  width: 40%;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.slider__descr {
+  margin-bottom: calc(var(--idnex) * 2.6);
+  letter-spacing: calc(var(--idnex) * .24);
+  font-size: calc(var(--idnex));
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .8);
+}
+
+.slider__button {
+  padding: 9.25px 40px;
+  outline: 1px solid #d0d0d0;
+  border: none;
+  border-radius: 20px;
+  font-family: sans-serif;
+  font-size: 15.25px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #d0d0d0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s, background-color .3s, outline .3s;
+}
+
+.slider__button:hover {
+  color: #333;
+  background-color: #d0d0d0;
+}
+
+.slider__button:focus-visible:not(:hover) {
+  color: #333;
+  background-color: #d0d0d0;
+}
+
+.slider__button:active {
+  outline: 1px solid #4b4d53;
+  background-color: #4b4d53;
+  color: #bcbcbc;
+}
+
+.slider__navigation>* {
+  border: 1.5px solid var(--swiper-theme-color);
+  border-radius: 10rem;
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Блок с контентов отцентрируем по оси Y и X */
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.swiper-slide-active .slide__content {
+  opacity: 1;
+}
+
+.video__background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 94%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: .7;
+  transition: opacity 2s ease-in-out;
+}
+
+.video__background.change {
+  opacity: 1;
+}
